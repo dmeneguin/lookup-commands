@@ -3,3 +3,7 @@ netstat -tulpn
 
 #kill process by PID
 sudo kill -9 <PID>
+
+#delete npm registry config
+echo "" > $(npm config get userconfig)
+npm config edit
