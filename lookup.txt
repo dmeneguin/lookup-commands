@@ -1,0 +1,5 @@
+#list process using ports
+netstat -tulpn
+
+#kill process by PID
+sudo kill -9 <PID>
