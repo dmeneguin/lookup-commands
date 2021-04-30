@@ -8,5 +8,9 @@ sudo kill -9 <PID>
 echo "" > $(npm config get userconfig)
 npm config edit
 
+#trace depreciation on node
+export NODE_OPTIONS=--trace-warnings
+export NODE_PENDING_DEPRECATION=1
+
 #show environment variables
 printenv
