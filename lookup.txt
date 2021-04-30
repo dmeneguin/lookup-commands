@@ -7,3 +7,6 @@ sudo kill -9 <PID>
 #delete npm registry config
 echo "" > $(npm config get userconfig)
 npm config edit
+
+#show environment variables
+printenv
