@@ -1,0 +1,16 @@
+#full tutorial: https://www.howtogeek.com/427982/how-to-encrypt-and-decrypt-files-with-gpg-on-linux/
+
+#generate own key
+gpg --full-generate-key
+
+#import someone else key
+gpg --import mary-geek.key
+
+#export own public key
+gpg --output ~/dave-geek.key --armor --export dave-geek@protonmail.com
+
+#encrypt file
+gpg --encrypt --sign --armor -r mary-geek@protonmail.com
+
+#decrypt file
+gpg --decrypt coded.asc > plain.txt
