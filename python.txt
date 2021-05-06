@@ -6,3 +6,6 @@ source env/bin/activate
 
 #deactivate venv
 deactivate
+
+#run jupyter notebook
+jupyter-lab
