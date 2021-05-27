@@ -1,0 +1,5 @@
+#run pgadmin container
+docker run -p 8090:80  -e "PGADMIN_DEFAULT_EMAIL=pgadmin@pgadmin.com" -e "PGADMIN_DEFAULT_PASSWORD=pgadmin"  -d dpage/pgadmin4
+
+#execute bash inside of container
+docker exec -it <container_name> bash
