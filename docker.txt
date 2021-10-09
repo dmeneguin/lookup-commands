@@ -3,3 +3,9 @@ docker run -p 8090:80  -e "PGADMIN_DEFAULT_EMAIL=pgadmin@pgadmin.com" -e "PGADMI
 
 #execute bash inside of container
 docker exec -it <container_name> bash
+
+#delete all containers
+docker rm -vf $(docker ps -a -q)
+
+#delete all images
+docker rmi -f $(docker images -a -q)
