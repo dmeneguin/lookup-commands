@@ -1,2 +1,5 @@
 #add staged files to last commit
 git commit --amend --no-edit
+
+#remove sslverify on clone
+git -c http.sslVerify=false clone <repo>

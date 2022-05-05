@@ -14,3 +14,6 @@ export NODE_PENDING_DEPRECATION=1
 
 #show environment variables
 printenv
+
+#subfolders sorted by size
+du -a /home/coder | sort -n -r | head -n 20
