@@ -3,3 +3,6 @@ git commit --amend --no-edit
 
 #remove sslverify on clone
 git -c http.sslVerify=false clone <repo>
+
+#reset commits
+git reset --hard <commit-hash>
