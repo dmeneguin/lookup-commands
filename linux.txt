@@ -17,3 +17,4 @@ printenv
 
 #subfolders sorted by size
 du -a /home/coder | sort -n -r | head -n 20
+du -hs $(ls -A)
