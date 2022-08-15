@@ -1,3 +1,7 @@
-#delete pod
-kubectl get pods
-kubectl delete pods nome_do_seu_pod
+kubectl config get-contexts
+kubectl config use-context <context_name>
+kubectl get namespaces
+kubectl get pods --namespace <namespace_name>
+kubectl get pods <pod_name> --namespace <namespace_name> -o yaml
+kubectl delete pods <pod_name> --namespace <namespace_name>
+kubectl logs <pod_name> --namespace <namespace_name> -c <conatiner_name>
