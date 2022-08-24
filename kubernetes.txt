@@ -8,3 +8,4 @@ kubectl logs <pod_name> --namespace <namespace_name> -c <conatiner_name>
 kubectl get deployments -n <namespace>
 kubectl edit deployments <deployment> -n <namespace>
 kubectl describe pods <pod> -n <namespace>
+kubectl get pvc -n <namespace>
