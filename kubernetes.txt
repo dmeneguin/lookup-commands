@@ -10,3 +10,4 @@ kubectl edit deployments <deployment> -n <namespace>
 kubectl describe pods <pod> -n <namespace>
 kubectl get pvc -n <namespace>
 kubectl exec -it <pod> -n <namespace> --container <container> -- /bin/bash
+kubectl get secrets -n <namespace>
