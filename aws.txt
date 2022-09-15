@@ -1,1 +1,7 @@
 aws s3 ls s3://<bucket> --recursive --human-readable --summarize >> <file>.txt
+
+[KINESIS]
+aws kinesis list-streams
+aws kinesis put-record --stream-name Foo --partition-key 123 --data testdata
+aws kinesis get-shard-iterator --shard-id shardId-000000000000 --shard-iterator-type TRIM_HORIZON --stream-name Foo
+aws kinesis get-records --shard-iterator <shard_iterator>
