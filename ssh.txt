@@ -1,2 +1,5 @@
 #keygen
 ssh-keygen -t rsa -b 4096 -C "<email>"
+
+#copy file
+scp -i <pem_file> /local/path/file remote_user@remote_address:/remote/path/file
