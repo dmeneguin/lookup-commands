@@ -1,3 +1,8 @@
 rabbitmq-plugins enable rabbitmq_management
 rabbitmq-plugins enable rabbitmq_shovel
 rabbitmq-plugins enable rabbitmq_shovel_management 
+
+
+#CLI
+rabbitmqadmin -H <host> -u <user> -p <password> <command>
+rabbitmqadmin -H <host> -u <user> -p <password> list vhosts
