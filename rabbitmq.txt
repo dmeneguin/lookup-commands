@@ -6,3 +6,5 @@ rabbitmq-plugins enable rabbitmq_shovel_management
 #CLI
 rabbitmqadmin -H <host> -u <user> -p <password> <command>
 rabbitmqadmin -H <host> -u <user> -p <password> list vhosts
+rabbitmqadmin declare queue --vhost=/ name=test_queue durable=true
+rabbitmqadmin --vhost=/ declare binding source="test_exchange" destination_type="queue" destination="test_queue" routing_key="routing_key"
