@@ -19,3 +19,6 @@ printenv
 du -a /home/coder | sort -n -r | head -n 20
 du -hs $(ls -A)
 sudo du -sh *
+
+supervisorctl reread
+supervisorctl update
