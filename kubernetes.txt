@@ -12,6 +12,7 @@ kubectl get pvc -n <namespace>
 kubectl exec -it <pod> -n <namespace> --container <container> -- /bin/bash
 kubectl get secrets -n <namespace>
 kubectl get secret -n kube-system <kube_seal_secret_name> -o yaml >> <filename>
+kubectl config rename-context old-name new-name
 
 #kubeseal
 kubeseal --recovery-unseal --recovery-private-key <filename> -o yaml < <sealed_secret>.yml
