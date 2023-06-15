@@ -1,0 +1,15 @@
+The following PromQL query returns CPU usage (as the number of used CPU cores) by pod in every namespace:
+
+sum(rate(container_cpu_usage_seconds_total{container!=""}[5m])) by (namespace, pod)
+The container!="" filter is needed for filtering out cgroups hierarchy metrics - see this answer for details.
+
+The following query returns memory usage by pod in every namespace:
+
+sum(container_memory_usage_bytes{container!=""}) by (namespace, pod)
+The following query returns CPU usage (as the number of used CPU cores) by node:
+
+sum(rate(container_cpu_usage_seconds_total{container!=""}[5m])) by (node)
+The following query returns memory usage by node:
+
+sum(container_memory_usage_bytes{container!=""}) by (node)
+https://stackoverflow.com/questions/66057517/how-to-get-cpu-and-memory-usage-of-nodes-pods-in-prometheus
